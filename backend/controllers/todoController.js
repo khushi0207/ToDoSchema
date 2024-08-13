@@ -2,7 +2,9 @@ const ToDo = require('../model/toDoSchema')
 
 exports.createTodo = async(req,res) =>{
     try{
+        //console.log("asdasd")
     let todo = new ToDo(req.body)
+    console.log('todo',todo)
     await todo.save()
     res.json({
         success:true
@@ -16,6 +18,7 @@ exports.createTodo = async(req,res) =>{
 }
 exports.getAllTodo = async(req,res) =>{
     try{
+        //console.log("get")
         const todos = await ToDo.find()
         res.json({
             success:true,
