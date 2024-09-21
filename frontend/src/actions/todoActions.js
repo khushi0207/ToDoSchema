@@ -7,7 +7,7 @@ export const createTodo = (todo)=>{
         method : 'POST',
         header:{
             Accept : 'application/json',
-            'Content-type' : 'application/json'
+            'Content-Type' : 'application/json'
         },
         body : todo
     }).then((response) => {
@@ -23,7 +23,7 @@ export const getAllTodo=()=>{
         method :'GET',
         header:{
             Accept : 'application/json',
-            'Content-type' : 'application/json'
+            'Content-Type' : 'application/json'
         },
     }).then((response) => {
         //console.log("return")
@@ -38,7 +38,7 @@ export const updateTodo = (id,body) =>{
         method:'PATCH',
         header:{
             Accept:'application/json',
-            'Content-type' : 'application/json'
+            'Content-Type' : 'application/json'
         },
         body:JSON.stringify(body)
     }).then((res) =>{
@@ -53,7 +53,7 @@ export const deleteTodo =(id) =>{
         method:'DELETE',
         header:{
             Accept:'application/json',
-            'Content-type' : 'application/json'
+            'Content-Type' : 'application/json'
         },
     }).then((res) =>{
         return res.json()
